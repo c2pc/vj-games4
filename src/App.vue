@@ -119,7 +119,7 @@ onMounted(()=>{
           </div>
         </div>
       </div>
-      <div class="block" :class="selected == 1 ? 'selected' : ''" @click.stop="onClickBlock(2)">
+      <div class="block" :class="selected == 1 ? 'selected' : ''" @click.stop="onClickBlock(1)">
         <SmallBg class="bg2"/>
         <Small class="bg1"/>
         <div class="desc">
@@ -132,7 +132,7 @@ onMounted(()=>{
           </div>
         </div>
       </div>
-      <div class="block" :class="selected == 2 ? 'selected' : ''" @click.stop="onClickBlock(3)">
+      <div class="block" :class="selected == 2 ? 'selected' : ''" @click.stop="onClickBlock(2)">
         <SmallBg class="bg2"/>
         <Small class="bg1"/>
         <div class="desc">
@@ -145,7 +145,7 @@ onMounted(()=>{
           </div>
         </div>
       </div>
-      <div class="block" :class="selected == 3 ? 'selected' : ''" @click.stop="onClickBlock(4)">
+      <div class="block" :class="selected == 3 ? 'selected' : ''" @click.stop="onClickBlock(3)">
         <SmallBg class="bg2"/>
         <Small class="bg1"/>
         <div class="desc">
@@ -158,7 +158,7 @@ onMounted(()=>{
           </div>
         </div>
       </div>
-      <div class="block" :class="selected == 4 ? 'selected' : ''" @click.stop="onClickBlock(5)">
+      <div class="block" :class="selected == 4 ? 'selected' : ''" @click.stop="onClickBlock(4)">
         <SmallBg class="bg2"/>
         <Small class="bg1"/>
         <div class="desc">
@@ -171,7 +171,7 @@ onMounted(()=>{
           </div>
         </div>
       </div>
-      <div class="block" :class="selected == 5 ? 'selected' : ''" @click.stop="onClickBlock(6)">
+      <div class="block" :class="selected == 5 ? 'selected' : ''" @click.stop="onClickBlock(5)">
         <SmallBg class="bg2"/>
         <Small class="bg1"/>
         <div class="desc">
@@ -184,7 +184,7 @@ onMounted(()=>{
           </div>
         </div>
       </div>
-      <div class="block" :class="selected == 6 ? 'selected' : ''" @click.stop="onClickBlock(7)">
+      <div class="block" :class="selected == 6 ? 'selected' : ''" @click.stop="onClickBlock(6)">
         <SmallBg class="bg2"/>
         <Small class="bg1"/>
         <div class="desc">
@@ -197,7 +197,7 @@ onMounted(()=>{
           </div>
         </div>
       </div>
-      <div class="block" :class="selected == 7 ? 'selected' : ''" @click.stop="onClickBlock(8)">
+      <div class="block" :class="selected == 7 ? 'selected' : ''" @click.stop="onClickBlock(7)">
         <SmallBg class="bg2"/>
         <Small class="bg1"/>
         <div class="desc">
@@ -210,7 +210,7 @@ onMounted(()=>{
           </div>
         </div>
       </div>
-      <div class="block" :class="selected == 8 ? 'selected' : ''" @click.stop="onClickBlock(9)">
+      <div class="block" :class="selected == 8 ? 'selected' : ''" @click.stop="onClickBlock(8)">
         <SmallBg class="bg2"/>
         <Small class="bg1"/>
         <div class="desc">
@@ -223,7 +223,7 @@ onMounted(()=>{
           </div>
         </div>
       </div>
-      <div class="block" :class="selected == 9 ? 'selected' : ''" @click.stop="onClickBlock(10)">
+      <div class="block" :class="selected == 9 ? 'selected' : ''" @click.stop="onClickBlock(9)">
         <SmallBg class="bg2"/>
         <Small class="bg1"/>
         <div class="desc">
@@ -236,7 +236,7 @@ onMounted(()=>{
           </div>
         </div>
       </div>
-      <div class="block" :class="selected == 10 ? 'selected' : ''" @click.stop="onClickBlock(11)">
+      <div class="block" :class="selected == 10 ? 'selected' : ''" @click.stop="onClickBlock(10)">
         <SmallBg class="bg2"/>
         <Small class="bg1"/>
         <div class="desc">
@@ -249,7 +249,7 @@ onMounted(()=>{
           </div>
         </div>
       </div>
-      <div class="block" :class="selected == 11 ? 'selected' : ''" @click.stop="onClickBlock(12)">
+      <div class="block" :class="selected == 11 ? 'selected' : ''" @click.stop="onClickBlock(11)">
         <SmallBg class="bg2"/>
         <Small class="bg1"/>
         <div class="desc">
@@ -262,7 +262,7 @@ onMounted(()=>{
           </div>
         </div>
       </div>
-      <div class="block" :class="selected == 12 ? 'selected' : ''" @click.stop="onClickBlock(13)">
+      <div class="block" :class="selected == 12 ? 'selected' : ''" @click.stop="onClickBlock(12)">
         <SmallBg class="bg2"/>
         <Small class="bg1"/>
         <div class="desc">
@@ -275,7 +275,7 @@ onMounted(()=>{
           </div>
         </div>
       </div>
-      <div class="block" :class="selected == 13 ? 'selected' : ''" @click.stop="onClickBlock(14)">
+      <div class="block" :class="selected == 13 ? 'selected' : ''" @click.stop="onClickBlock(13)">
         <SmallBg class="bg2"/>
         <Small class="bg1"/>
         <div class="desc">
@@ -288,7 +288,7 @@ onMounted(()=>{
           </div>
         </div>
       </div>
-      <div class="block" :class="selected == 14 ? 'selected' : ''" @click.stop="onClickBlock(15)">
+      <div class="block" :class="selected == 14 ? 'selected' : ''" @click.stop="onClickBlock(14)">
         <SmallBg class="bg2"/>
         <Small class="bg1"/>
         <div class="desc">
@@ -301,7 +301,7 @@ onMounted(()=>{
           </div>
         </div>
       </div>
-      <div class="block" :class="selected == 15 ? 'selected' : ''" @click.stop="onClickBlock(16)">
+      <div class="block" :class="selected == 15 ? 'selected' : ''" @click.stop="onClickBlock(15)">
         <SmallBg class="bg2"/>
         <Small class="bg1"/>
         <div class="desc">
@@ -314,7 +314,7 @@ onMounted(()=>{
           </div>
         </div>
       </div>
-      <div class="block" :class="selected == 16 ? 'selected' : ''" @click.stop="onClickBlock(17)">
+      <div class="block" :class="selected == 16 ? 'selected' : ''" @click.stop="onClickBlock(16)">
         <SmallBg class="bg2"/>
         <Small class="bg1"/>
         <div class="desc">
