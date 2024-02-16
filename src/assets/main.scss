@@ -1,9 +1,32 @@
+@font-face {
+  font-family: "PHGTL";
+  src:
+          url("fonts/PHGTL.woff2") format("woff2"),
+          url("fonts/PHGTL.eot") format("eot"),
+          url("fonts/PHGTL.otf") format("otf"),
+          url("fonts/PHGTL.ttf") format("ttf"),
+          url("fonts/PHGTL.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Autonomous";
+  src:
+          url("fonts/TT_Autonomous_Regular.woff2") format("woff2"),
+          url("fonts/TT_Autonomous_Regular.eot") format("eot"),
+          url("fonts/TT Autonomous Regular.otf") format("otf"),
+          url("fonts/TT Autonomous Regular.ttf") format("ttf"),
+          url("fonts/TT_Autonomous_Regular.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
-  background: #FFF;
+  background-color: #010505;
 }
 
 *, *::before, *::after {
@@ -19,8 +42,13 @@ body {
 }
 
 #app {
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: url("bg.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #0C0C26;
 }
 
 .container {
@@ -28,42 +56,128 @@ body {
   min-width: 100vw;
   gap: 6px;
   margin: 0 auto;
-  padding: 122px 0 75px;
+  padding: 81.46px 0 20px;
   top: 0;
   -webkit-transform-style: preserve-3d;
   -webkit-perspective: 1000px;
 }
 
 .blocks {
-  margin: 203px auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  row-gap: 32.67px;
-  max-width: 887.98px;
+  row-gap: 32px;
+  max-width: 886px;
   width: 100vw;
+  transition: .5s;
 }
 
 .blocks .block {
-  --space: 101.99px;
-  width: calc(50% - var(--space) / 2);
-  height: 161.737px;
+  width: 393px;
+  height: 164px;
   cursor: pointer;
-  background: #00F;
+  position: relative;
 }
 
-.blocks .block:nth-child(1) {
+.blocks .block .bg1 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -10;
+}
+
+.blocks .header {
   width: 100%;
   height: 200px;
-  cursor: pointer;
+  position: relative;
 }
 
-@media screen and (max-width: 887.98px){
-  .blocks {
-    padding: 0 20px;
-  }
-  .blocks .block {
-    width: 100%;
-    height: 161.737px!important;
-  }
+.blocks .header .desc {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #000;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  padding: 10px 10px 10px 20px;
+  font-family: PHGTL;
+  font-size: 72px;
+}
+
+.blocks .header .bg1 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -10;
+}
+
+.blocks .block .desc {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  color: #000;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  padding: 10px 10px 10px 20px;
+  font-family: 'TT Autonomous';
+  font-size: 25px;
+}
+
+.blocks .block .desc .text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.blocks path{
+  transition: .5s;
+}
+
+.blocks .desc{
+  transition: .5s;
+}
+
+.blocks .block.selected .bg1 path{
+  fill: #000;
+  transition: .5s;
+}
+
+.blocks .block.selected .icon path{
+  fill: #60BBC4;
+  transition: .5s;
+}
+
+.blocks .block.selected .desc{
+  color: #60BBC4;
+  transition: .5s;
+}
+
+.blocks .block .bg2 {
+  max-width: 451px;
+  max-height: 222px;
+  position: absolute;
+  z-index: -100;
+  opacity: 0;
+  transition: .5s;
+  width: 451px;
+  height: 222px;
+  left: -29.5px;
+  top: -29px;
+}
+
+.blocks .block.selected .bg2 {
+  opacity: 1;
+  transition: .5s;
 }
