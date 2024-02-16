@@ -5,7 +5,7 @@
 <template>
   <svg width="451" height="222" viewBox="0 0 451 222" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g filter="url(#filter0_d_2193_1363)">
-      <path d="M29.7764 29.9614V191.961H379.768L421.894 159.123V29.6904L29.7764 29.9614Z" fill="black"/></g>
+      <path d="M29.7764 29.9614V191.961H379.768L421.894 159.123V29.6904L29.7764 29.9614Z" fill="#60BBC4"/></g>
     <defs>
       <filter id="filter0_d_2193_1363" x="0.676367" y="0.590429" width="450.318" height="220.471" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
         <feFlood flood-opacity="0" result="BackgroundImageFix"/>

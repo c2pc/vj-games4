@@ -70,7 +70,7 @@ body {
   row-gap: 32px;
   max-width: 886px;
   width: 100vw;
-  transition: .5s;
+  transition: .7s;
 }
 
 .blocks .block {
@@ -142,42 +142,42 @@ body {
 }
 
 .blocks path{
-  transition: .5s;
+  transition: .7s;
 }
 
 .blocks .desc{
-  transition: .5s;
+  transition: .7s;
 }
 
-.blocks .block.selected .bg1 path{
+.blocks .block.selected .bg1 path, .blocks .block.selected .bg2 path{
   fill: #000;
-  transition: .5s;
+  transition: .7s;
 }
 
 .blocks .block.selected .icon path{
   fill: #60BBC4;
-  transition: .5s;
+  transition: .7s;
 }
 
 .blocks .block.selected .desc{
   color: #60BBC4;
-  transition: .5s;
+  transition: .7s;
 }
 
 .blocks .block .bg2 {
-  max-width: 451px;
-  max-height: 222px;
+  max-width: 450px;
+  max-height: 221px;
   position: absolute;
   z-index: -100;
   opacity: 0;
-  transition: .5s;
-  width: 451px;
-  height: 222px;
-  left: -29.5px;
-  top: -29px;
+  transition: .7s;
+  width: 450px;
+  height: 221px;
+  left: -29px;
+  top: -28px
 }
 
 .blocks .block.selected .bg2 {
   opacity: 1;
-  transition: .5s;
+  transition: .7s;
 }
