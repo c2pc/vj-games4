@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import {onMounted, ref, watch} from "vue";
+import axios from "axios";
 import Big from "./components/big.vue";
 import Small from "./components/small.vue";
 import Icon1 from "./components/icon1.vue";
@@ -21,78 +22,95 @@ import Icon16 from "./components/icon16.vue";
 import SmallBg from "./components/small-bg.vue";
 
 const selected = ref(0);
-
-watch(() => selected.value, (id: typeof selected.value) => {
-  switch (id) {
-    case 1: {
-      console.log("Нажата кнопка 1")
-      break;
-    }
-    case 2: {
-      console.log("Нажата кнопка 2")
-      break;
-    }
-    case 3: {
-      console.log("Нажата кнопка 3")
-      break;
-    }
-    case 4: {
-      console.log("Нажата кнопка 4")
-      break;
-    }
-    case 5: {
-      console.log("Нажата кнопка 5")
-      break;
-    }
-    case 6: {
-      console.log("Нажата кнопка 6")
-      break;
-    }
-    case 7: {
-      console.log("Нажата кнопка 7")
-      break;
-    }
-    case 8: {
-      console.log("Нажата кнопка 8")
-      break;
-    }
-    case 9: {
-      console.log("Нажата кнопка 9")
-      break;
-    }
-    case 10: {
-      console.log("Нажата кнопка 10")
-      break;
-    }
-    case 11: {
-      console.log("Нажата кнопка 11")
-      break;
-    }
-    case 12: {
-      console.log("Нажата кнопка 12")
-      break;
-    }
-    case 13: {
-      console.log("Нажата кнопка 13")
-      break;
-    }
-    case 14: {
-      console.log("Нажата кнопка 14")
-      break;
-    }
-    case 15: {
-      console.log("Нажата кнопка 15")
-      break;
-    }
-    case 16: {
-      console.log("Нажата кнопка 16")
-      break;
+// Функция для отправки OSC сообщений теперь принимает адрес OSC в качестве параметра
+const sendOscMessage = (address, id) => {
+  axios.post('http://10.30.38.118:3000/send-osc', {
+    address, // Используйте переданный адрес
+    args: [id],
+  })
+      .then(() => console.log(`OSC message sent for address: ${address} with id: ${id}`))
+      .catch(error => console.error('Error sending OSC message:', error));
+};
+watch(() => selected.value, (newVal, oldVal) => {
+  if (newVal === 0 && oldVal !== 0) {
+    // Здесь отправляем OSC сообщение при отжатии кнопки
+    sendOscMessage('/composition/columns/1/connect', oldVal); // Используйте соответствующий адрес и предыдущее значение id как аргумент
+    console.log(`Кнопка ${oldVal} отжата`);
+  } else if (newVal !== 0) {
+    // Остальная логика для нажатия кнопок
+    console.log(`Нажата кнопка ${newVal}`);
+    switch (newVal) {
+      case 1:
+        console.log("Нажата кнопка 1")
+        sendOscMessage('/composition/columns/2/connect', 1);
+        break;
+      case 2:
+        console.log("Нажата кнопка 2")
+        sendOscMessage('/composition/columns/3/connect', 1);
+        break;
+      case 3:
+        console.log("Нажата кнопка 3")
+        sendOscMessage('/composition/columns/4/connect', 1);
+        break;
+      case 4:
+        console.log("Нажата кнопка 4")
+        sendOscMessage('/composition/columns/5/connect', 1);
+        break;
+      case 5:
+        console.log("Нажата кнопка 5")
+        sendOscMessage('/composition/columns/6/connect', 1);
+        break;
+      case 6:
+        console.log("Нажата кнопка 6")
+        sendOscMessage('/composition/columns/7/connect', 1);
+        break;
+      case 7:
+        console.log("Нажата кнопка 7")
+        sendOscMessage('/composition/columns/8/connect', 1);
+        break;
+      case 8:
+        console.log("Нажата кнопка 8")
+        sendOscMessage('/composition/columns/9/connect', 1);
+        break;
+      case 9:
+        console.log("Нажата кнопка 9")
+        sendOscMessage('/composition/columns/10/connect', 1);
+        break;
+      case 10:
+        console.log("Нажата кнопка 10")
+        sendOscMessage('/composition/columns/11/connect', 1);
+        break;
+      case 11:
+        console.log("Нажата кнопка 11")
+        sendOscMessage('/composition/columns/12/connect', 1);
+        break;
+      case 12:
+        console.log("Нажата кнопка 12")
+        sendOscMessage('/composition/columns/13/connect', 1);
+        break;
+      case 13:
+        console.log("Нажата кнопка 13")
+        sendOscMessage('/composition/columns/14/connect', 1);
+        break;
+      case 14:
+        console.log("Нажата кнопка 14")
+        sendOscMessage('/composition/columns/15/connect', 1);
+        break;
+      case 15:
+        console.log("Нажата кнопка 15")
+        sendOscMessage('/composition/columns/16/connect', 1);
+        break;
+      case 16:
+        console.log("Нажата кнопка 16")
+        sendOscMessage('/composition/columns/17/connect', 1);
+        break;
     }
   }
-})
+});
 
 const onClickContainer = () => {
   selected.value = 0
+  sendOscMessage('/composition/columns/1/connect', 1);
 }
 
 const onClickBlock = (id: number) => {
