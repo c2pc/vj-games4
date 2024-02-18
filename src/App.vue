@@ -146,7 +146,7 @@ onMounted(()=>{
           </div>
           <div class="text">
             <span>ФИДЖИТАЛ</span>
-            <span>БАСКЕТБОЛ</span>
+            <span style="font-size: 20px;">ЕДИНОБОРСТВО</span>
           </div>
         </div>
       </div>
