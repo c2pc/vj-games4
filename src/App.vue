@@ -24,7 +24,7 @@ import SmallBg from "./components/small-bg.vue";
 const selected = ref(0);
 // Функция для отправки OSC сообщений теперь принимает адрес OSC в качестве параметра
 const sendOscMessage = (address, id) => {
-  axios.post('http://10.30.38.118:3000/send-osc', {
+  axios.post('http://10.30.39.49:3000/send-osc', {
     address, // Используйте переданный адрес
     args: [id],
   })
